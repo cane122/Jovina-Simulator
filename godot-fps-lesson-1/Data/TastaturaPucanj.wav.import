@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/TastaturaPucanj.wav-bc5ea4837736a0b0bf097f5816d81c59.sample"
+
+[deps]
+
+source_file="res://Data/TastaturaPucanj.wav"
+dest_files=[ "res://.import/TastaturaPucanj.wav-bc5ea4837736a0b0bf097f5816d81c59.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

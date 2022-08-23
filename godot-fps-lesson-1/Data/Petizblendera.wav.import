@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Petizblendera.wav-a2e1708e65e1fbeeb0d2a3d12c7fdf01.sample"
+
+[deps]
+
+source_file="res://Data/Petizblendera.wav"
+dest_files=[ "res://.import/Petizblendera.wav-a2e1708e65e1fbeeb0d2a3d12c7fdf01.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

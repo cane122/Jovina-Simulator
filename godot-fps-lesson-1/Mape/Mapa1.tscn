@@ -1,0 +1,344 @@
+[gd_scene load_steps=12 format=2]
+
+[sub_resource type="SpatialMaterial" id=15]
+albedo_color = Color( 0, 0.0352941, 0.588235, 1 )
+
+[sub_resource type="CubeMesh" id=16]
+material = SubResource( 15 )
+
+[sub_resource type="Skin" id=17]
+
+[sub_resource type="SpatialMaterial" id=18]
+albedo_color = Color( 0, 0.992157, 1, 1 )
+
+[sub_resource type="BoxShape" id=19]
+
+[sub_resource type="Skin" id=20]
+
+[sub_resource type="SpatialMaterial" id=21]
+albedo_color = Color( 0, 0.992157, 1, 1 )
+
+[sub_resource type="SpatialMaterial" id=10]
+albedo_color = Color( 0.321569, 0.686275, 0.364706, 1 )
+
+[sub_resource type="CubeMesh" id=22]
+material = SubResource( 10 )
+
+[sub_resource type="Skin" id=23]
+
+[sub_resource type="ConvexPolygonShape" id=24]
+points = PoolVector3Array( -1, 1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, -1, -1, -1, -1, 1, -1, 1, -1, -1 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="zidovi" type="CSGCombiner" parent="."]
+
+[node name="zid2" type="MeshInstance" parent="zidovi"]
+transform = Transform( -6.96524e-07, 0, 0.996077, 0, 8.39832, 0, -56.0712, 0, -1.53209e-07, -39.2362, 2.15311, 0.0950947 )
+mesh = SubResource( 16 )
+skin = SubResource( 17 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 18 )
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid2/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, -5.68434e-14, 0, 1, 0, 0, 0 )
+shape = SubResource( 19 )
+
+[node name="zid6" type="MeshInstance" parent="zidovi"]
+transform = Transform( 56.0712, 0, 0, 0, 8.39832, 0, 0, 0, 0.996077, 12.2044, 2.15311, 55.8967 )
+mesh = SubResource( 16 )
+skin = SubResource( 20 )
+skeleton = NodePath("../..")
+material/0 = SubResource( 21 )
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid6"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid6/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, -5.68434e-14, 0, 1, 0, 0, 0 )
+shape = SubResource( 19 )
+
+[node name="zid5" type="MeshInstance" parent="zidovi" groups=["floor"]]
+transform = Transform( -1.49304e-06, 5.11599, -2.65231e-08, 0, -3.67102e-07, -0.996077, -56.0712, -3.67102e-07, 1.90319e-15, -34.9256, -3.29295, 0.556589 )
+mesh = SubResource( 16 )
+skin = SubResource( 17 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid5"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid5/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, -5.68434e-14, 0, 1, 0, 0, 0 )
+shape = SubResource( 19 )
+
+[node name="zid9" type="MeshInstance" parent="zidovi" groups=["floor"]]
+transform = Transform( -6.32521e-07, 2.16737, -1.12364e-08, 0, -8.8028e-08, -0.238851, -56.0712, -3.67102e-07, 1.90319e-15, -36.5201, 2.91598, 0.384008 )
+mesh = SubResource( 16 )
+skin = SubResource( 17 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid9"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid9/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, -5.68434e-14, 0, 1, 0, 0, 0 )
+shape = SubResource( 19 )
+
+[node name="zid10" type="MeshInstance" parent="zidovi" groups=["floor"]]
+transform = Transform( -1.09536e-07, 0, 0.238851, 0, 2.98645, 0, -2.5059, 0, -1.04405e-08, -34.2038, 0.326651, 52.8995 )
+mesh = SubResource( 16 )
+skin = SubResource( 17 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid10"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid10/StaticBody"]
+transform = Transform( 1, -4.44089e-16, 0, 0, 1, -9.90567e-24, -5.68434e-14, 2.84217e-14, 1, 0, 0, 0 )
+shape = SubResource( 19 )
+
+[node name="zid11" type="MeshInstance" parent="zidovi" groups=["floor"]]
+transform = Transform( -1.09536e-07, 0, 0.238851, 0, 2.98645, 0, -2.5059, 0, -1.04405e-08, -34.2038, 5.57763, 52.8995 )
+mesh = SubResource( 16 )
+skin = SubResource( 17 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid11"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid11/StaticBody"]
+transform = Transform( 1, -4.44089e-16, 0, 0, 1, -9.90567e-24, -5.68434e-14, 2.84217e-14, 1, 0, 0, 0 )
+shape = SubResource( 19 )
+
+[node name="zid12" type="MeshInstance" parent="zidovi" groups=["floor"]]
+transform = Transform( -1.09536e-07, 0, 0.238851, 0, 2.98645, 0, -2.5059, 0, -1.04405e-08, -34.2038, 5.57763, 44.4059 )
+mesh = SubResource( 16 )
+skin = SubResource( 17 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid12"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid12/StaticBody"]
+transform = Transform( 1, -4.44089e-16, 0, 0, 1, -9.90567e-24, -5.68434e-14, 2.84217e-14, 1, 0, 0, 0 )
+shape = SubResource( 19 )
+
+[node name="zid13" type="MeshInstance" parent="zidovi" groups=["floor"]]
+transform = Transform( -1.09536e-07, 0, 0.238851, 0, 1.11006, 0, -2.5059, 0, -1.04405e-08, -34.2038, 3.7496, 48.6368 )
+mesh = SubResource( 16 )
+skin = SubResource( 17 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid13"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid13/StaticBody"]
+transform = Transform( 1, -4.44089e-16, 0, 0, 1, -9.90567e-24, -5.68434e-14, 2.84217e-14, 1, 0, 0, 0 )
+shape = SubResource( 19 )
+
+[node name="zid7" type="MeshInstance" parent="zidovi" groups=["floor"]]
+transform = Transform( 16.1749, 1.79074e-08, 0.079763, 1.29941, -2.22909e-07, -0.992878, 0, 5.11599, -4.35399e-08, 10.3077, -1.90861, 50.1651 )
+mesh = SubResource( 16 )
+skin = SubResource( 17 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid7"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid7/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, -5.68434e-14, 0, 1, 0, 0, 0 )
+shape = SubResource( 19 )
+
+[node name="zid8" type="MeshInstance" parent="zidovi" groups=["floor"]]
+transform = Transform( -1.20152e-07, 0.866617, -7.37539e-09, 4.28023, -1.56721e-07, -0.960801, -15.6523, -2.74694e-07, -0.262737, 25.4298, 3.61208, 36.6238 )
+mesh = SubResource( 16 )
+skin = SubResource( 17 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid8"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid8/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, -5.68434e-14, 0, 1, 0, 0, 0 )
+shape = SubResource( 19 )
+
+[node name="zid4" type="MeshInstance" parent="zidovi"]
+transform = Transform( 25.9569, 0, 0, 0, 6.72624, 0, 0, 0, 1, 15.2379, 1.58182, -12.5226 )
+mesh = SubResource( 16 )
+skin = SubResource( 17 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid4"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid4/StaticBody"]
+shape = SubResource( 19 )
+
+[node name="zid18" type="MeshInstance" parent="zidovi"]
+transform = Transform( 25.9569, 0, 0, 0, -2.94013e-07, -1, 0, 15.485, -1.00631e-07, 15.2379, 8.80524, -59.2492 )
+mesh = SubResource( 16 )
+skin = SubResource( 17 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid18"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid18/StaticBody"]
+shape = SubResource( 19 )
+
+[node name="zid14" type="MeshInstance" parent="zidovi"]
+transform = Transform( 16.8775, 0, 0, 0, 6.72624, 0, 0, 0, 1, 24.0695, 1.58182, 17.2314 )
+mesh = SubResource( 16 )
+skin = SubResource( 17 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid14"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid14/StaticBody"]
+shape = SubResource( 19 )
+
+[node name="zid17" type="MeshInstance" parent="zidovi"]
+transform = Transform( 3.06239, 0, 0, 0, 6.72624, 0, 0, 0, 1, -6.92243, 1.58182, 17.2314 )
+mesh = SubResource( 16 )
+skin = SubResource( 17 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid17"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid17/StaticBody"]
+shape = SubResource( 19 )
+
+[node name="zid19" type="MeshInstance" parent="zidovi"]
+transform = Transform( -1.33861e-07, -6.72624, 0, 0.893117, -8.57461e-08, 0, 0, 0, 1, 22.9955, -4.16998, -6.11593 )
+mesh = SubResource( 16 )
+skin = SubResource( 17 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid19"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid19/StaticBody"]
+shape = SubResource( 19 )
+
+[node name="zid23" type="MeshInstance" parent="zidovi"]
+transform = Transform( 1.70647e-15, 2.94013e-07, 1, 0.893117, -2.94013e-07, 0, 3.90394e-08, 6.72624, -4.37114e-08, 38.1755, -4.16998, -4.93345 )
+mesh = SubResource( 16 )
+skin = SubResource( 17 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid23"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid23/StaticBody"]
+shape = SubResource( 19 )
+
+[node name="zid24" type="MeshInstance" parent="zidovi"]
+transform = Transform( 1.70647e-15, 2.94013e-07, 1, 0.893117, -2.94013e-07, 0, 3.90394e-08, 6.72624, -4.37114e-08, 38.1755, -4.16998, 8.47666 )
+mesh = SubResource( 16 )
+skin = SubResource( 17 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid24"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid24/StaticBody"]
+shape = SubResource( 19 )
+
+[node name="zid25" type="MeshInstance" parent="zidovi"]
+transform = Transform( -8.57449e-08, -14.7733, 0, 0.893117, -2.94013e-07, 0, 0, 0, 1, 24.4247, -4.16998, 15.5498 )
+mesh = SubResource( 16 )
+skin = SubResource( 17 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid25"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid25/StaticBody"]
+transform = Transform( 1, -2.84217e-14, 0, -4.44089e-16, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 19 )
+
+[node name="zid20" type="MeshInstance" parent="zidovi"]
+transform = Transform( -1.33861e-07, -6.72624, 0, 0.893117, -8.57461e-08, 0, 0, 0, 1, 9.62799, -4.16998, -6.11593 )
+mesh = SubResource( 16 )
+skin = SubResource( 17 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid20"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid20/StaticBody"]
+shape = SubResource( 19 )
+
+[node name="zid21" type="MeshInstance" parent="zidovi"]
+transform = Transform( -1.33861e-07, -6.72624, 0, 0.893117, -8.57461e-08, 0, 0, 0, 1, 9.62799, -4.16998, 4.8404 )
+mesh = SubResource( 16 )
+skin = SubResource( 17 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid21"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid21/StaticBody"]
+shape = SubResource( 19 )
+
+[node name="zid26" type="MeshInstance" parent="zidovi"]
+transform = Transform( 1.70647e-15, 2.94013e-07, 1, 0.893117, -2.94013e-07, 0, 2.02729e-08, 3.49289, -2.2699e-08, 2.64594, -4.16998, 4.8404 )
+mesh = SubResource( 16 )
+skin = SubResource( 17 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid26"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid26/StaticBody"]
+shape = SubResource( 19 )
+
+[node name="zid22" type="MeshInstance" parent="zidovi"]
+transform = Transform( -1.33861e-07, -6.72624, 0, 0.893117, -8.57461e-08, 0, 0, 0, 1, 22.853, -4.16998, 4.8404 )
+mesh = SubResource( 16 )
+skin = SubResource( 17 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid22"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid22/StaticBody"]
+shape = SubResource( 19 )
+
+[node name="zid15" type="MeshInstance" parent="zidovi"]
+transform = Transform( -1.13461e-06, 0, 1, 0, 6.72624, 0, -14.3905, 0, -2.42337e-08, 40.0682, 1.58182, 2.51387 )
+mesh = SubResource( 16 )
+skin = SubResource( 17 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid15"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid15/StaticBody"]
+shape = SubResource( 19 )
+
+[node name="zid16" type="MeshInstance" parent="zidovi"]
+transform = Transform( -1.13461e-06, 0, 1, 0, 6.72624, 0, -14.3905, 0, -2.42337e-08, -9.107, 1.58182, 2.51387 )
+mesh = SubResource( 16 )
+skin = SubResource( 17 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="zidovi/zid16"]
+
+[node name="CollisionShape" type="CollisionShape" parent="zidovi/zid16/StaticBody"]
+shape = SubResource( 19 )
+
+[node name="Ground" type="MeshInstance" parent="."]
+transform = Transform( 69.7699, 0, 0, 0, 1, 0, 0, 0, 82.1059, 0, -6.04547, 0 )
+mesh = SubResource( 22 )
+skin = SubResource( 23 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="Ground"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Ground/StaticBody"]
+shape = SubResource( 24 )
