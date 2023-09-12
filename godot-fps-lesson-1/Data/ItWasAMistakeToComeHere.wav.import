@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/ItWasAMistakeToComeHere.wav-ad046b297c79c1329ab487f6b4d9df22.sample"
+type="AudioStreamWAV"
+uid="uid://d4cx1yhi4nhgp"
+path="res://.godot/imported/ItWasAMistakeToComeHere.wav-ad046b297c79c1329ab487f6b4d9df22.sample"
 
 [deps]
 
 source_file="res://Data/ItWasAMistakeToComeHere.wav"
-dest_files=[ "res://.import/ItWasAMistakeToComeHere.wav-ad046b297c79c1329ab487f6b4d9df22.sample" ]
+dest_files=["res://.godot/imported/ItWasAMistakeToComeHere.wav-ad046b297c79c1329ab487f6b4d9df22.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

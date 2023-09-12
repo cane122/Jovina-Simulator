@@ -2,15 +2,15 @@ extends Node
 
 class_name Weapon
 
-export var fire_rate = 0.12
-export var clip_size = 40
-export var reload_rate = 1
+@export var fire_rate = 0.12
+@export var clip_size = 40
+@export var reload_rate = 1
 var block = false
 var cooldown_rate = 10
 var current_weapon = 1
 
-onready var ammo_label = $"/root/World/UI/Label"
-onready var raycast = $"../../Head/Camera/RayCast"
+@onready var ammo_label = $"/root/World3D/UI/Label"
+@onready var raycast = $"../../Head/Camera3D/RayCast3D"
 var current_ammo = 0
 var weapon = 1
 var can_fire = true
@@ -42,19 +42,19 @@ func _process(delta):
 		current_weapon = 1
 		
 		block= true
-		yield(get_tree().create_timer(cooldown_rate), "timeout")
+		await get_tree().create_timer(cooldown_rate).timeout
 		stop_sound()
 	elif Input.is_action_just_pressed("switch_weapon_2"):
 		current_weapon = 2
 		stop_sound()
 		
 		block= true
-		yield(get_tree().create_timer(cooldown_rate), "timeout")
+		await get_tree().create_timer(cooldown_rate).timeout
 	elif Input.is_action_just_pressed("switch_weapon_3"):
 		current_weapon = 3
 		stop_sound()
 		block= true
-		yield(get_tree().create_timer(cooldown_rate), "timeout")
+		await get_tree().create_timer(cooldown_rate).timeout
 		
 	if reloading:
 		ammo_label.set_text("Reloading...")
@@ -83,7 +83,7 @@ func fire():
 func reload():
 	print("Reloading")
 	reloading = true
-	yield(get_tree().create_timer(reload_rate), "timeout")
+	await get_tree().create_timer(reload_rate).timeout
 	current_ammo = clip_size
 	reloading = false
 	print("Reload complete")

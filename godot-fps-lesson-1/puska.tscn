@@ -5,5 +5,5 @@
 [node name="t19" instance=ExtResource( 1 )]
 
 [node name="Cube" parent="." index="0"]
-transform = Transform( -1.19373e-08, 0.0352051, 0, 0.200275, 2.09839e-09, 0, 0, 0, 0.789141, 0, 0, 0.707735 )
+transform = Transform3D( -1.19373e-08, 0.0352051, 0, 0.200275, 2.09839e-09, 0, 0, 0, 0.789141, 0, 0, 0.707735 )
 layers = 2

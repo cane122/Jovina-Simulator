@@ -5,5 +5,5 @@
 [node name="Melee" instance=ExtResource( 1 )]
 
 [node name="Cylinder" parent="." index="0"]
-transform = Transform( 0.0444471, 0, 0, 0, 0, -0.0444471, 0, 0.159582, 0, 0.0033021, -0.267155, -1.78174 )
+transform = Transform3D( 0.0444471, 0, 0, 0, 0, -0.0444471, 0, 0.159582, 0, 0.0033021, -0.267155, -1.78174 )
 layers = 2

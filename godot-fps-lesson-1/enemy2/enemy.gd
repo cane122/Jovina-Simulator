@@ -1,11 +1,11 @@
-extends KinematicBody
+extends CharacterBody3D
 
-export var speed = 100
+@export var speed = 100
 var space_state
 var target
 
 func _ready():
-	space_state = get_world().direct_space_state
+	space_state = get_world_3d().direct_space_state
 
 func _process(delta):
 	if target:
@@ -31,10 +31,12 @@ func _on_Area_body_exited(body):
 
 func move_to_target(delta):
 	var direction = (target.transform.origin - transform.origin).normalized()
-	move_and_slide(direction * speed * delta, Vector3.UP)
+	set_velocity(direction * speed * delta)
+	set_up_direction(Vector3.UP)
+	move_and_slide()
 
 func set_color_red():
-	$MeshInstance.get_surface_material(0).set_albedo(Color(1, 0, 0))
+	$MeshInstance3D.get_surface_override_material(0).set_albedo(Color(1, 0, 0))
 
 func set_color_green():
-	$MeshInstance.get_surface_material(0).set_albedo(Color(0, 1, 0))
+	$MeshInstance3D.get_surface_override_material(0).set_albedo(Color(0, 1, 0))

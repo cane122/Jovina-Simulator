@@ -1,65 +1,58 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=14 format=3 uid="uid://b2airl3pc5p2e"]
 
-[ext_resource path="res://Player/Player.gd" type="Script" id=1]
-[ext_resource path="res://ED-19.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Player/GunCamera.gd" type="Script" id=3]
-[ext_resource path="res://puska.tscn" type="PackedScene" id=4]
-[ext_resource path="res://mis.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Player/t19shootVFX.gd" type="Script" id=6]
+[ext_resource type="Script" path="res://Player/Player.gd" id="1"]
+[ext_resource type="PackedScene" path="res://ED-19.tscn" id="2"]
+[ext_resource type="Script" path="res://Player/GunCamera.gd" id="3"]
+[ext_resource type="PackedScene" path="res://puska.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://mis.tscn" id="5"]
+[ext_resource type="Script" path="res://Player/t19shootVFX.gd" id="6"]
 
-[sub_resource type="Curve" id=5]
-_data = [ Vector2( 0, 0.836364 ), 0.0, 0.0, 0, 0, Vector2( 0.641304, 0.618182 ), 0.0, 0.0, 0, 0, Vector2( 0.875, 0.281818 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+[sub_resource type="Curve" id="5"]
+_data = [Vector2(0, 0.836364), 0.0, 0.0, 0, 0, Vector2(0.641304, 0.618182), 0.0, 0.0, 0, 0, Vector2(0.875, 0.281818), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
 
-[sub_resource type="CurveTexture" id=6]
+[sub_resource type="CurveTexture" id="6"]
 width = 512
-curve = SubResource( 5 )
+curve = SubResource("5")
 
-[sub_resource type="ParticlesMaterial" id=3]
+[sub_resource type="ParticleProcessMaterial" id="3"]
 emission_shape = 1
 emission_sphere_radius = 1.0
 spread = 90.0
-gravity = Vector3( 0, 0, 0 )
-initial_velocity = 30.0
-initial_velocity_random = 0.2
-radial_accel = 500.0
-radial_accel_random = 0.7
-scale = 0.4
-scale_random = 0.4
-scale_curve = SubResource( 6 )
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("6")
 
-[sub_resource type="SpatialMaterial" id=7]
-albedo_color = Color( 1, 0.623529, 0, 1 )
+[sub_resource type="StandardMaterial3D" id="7"]
+albedo_color = Color(1, 0.623529, 0, 1)
 
-[sub_resource type="SphereMesh" id=4]
-material = SubResource( 7 )
+[sub_resource type="SphereMesh" id="4"]
+material = SubResource("7")
 
-[sub_resource type="CapsuleShape" id=1]
-radius = 0.75
+[sub_resource type="CapsuleShape3D" id="1"]
+radius = 0.625
 height = 1.25
 
-[sub_resource type="CapsuleMesh" id=2]
-radius = 0.75
-mid_height = 1.25
+[sub_resource type="CapsuleMesh" id="2"]
+radius = 0.625
+height = 1.25
 
-[node name="Player" type="KinematicBody"]
-script = ExtResource( 1 )
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1")
 
-[node name="Head" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.919402, 0 )
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.919402, 0)
 
-[node name="Camera" type="Camera" parent="Head"]
+[node name="Camera3D" type="Camera3D" parent="Head"]
 cull_mask = 1048573
 far = 1000.0
 
-[node name="RayCast" type="RayCast" parent="Head/Camera"]
-enabled = true
-cast_to = Vector3( 0, 0, -69 )
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
 
-[node name="t19" parent="Head/Camera" instance=ExtResource( 4 )]
-transform = Transform( -0.983451, 0.0851213, -0.159936, 0.0840175, 0.996371, 0.0136636, 0.160519, 0, -0.987033, 0.749395, -0.406361, -0.557053 )
+[node name="t19" parent="Head/Camera3D" instance=ExtResource("4")]
+transform = Transform3D(-0.983451, 0.0851213, -0.159936, 0.0840175, 0.996371, 0.0136636, 0.160519, 0, -0.987033, 0.749395, -0.406361, -0.557053)
 
-[node name="t19shootVFX" type="Particles" parent="Head/Camera/t19" groups=["t19Particle"]]
-transform = Transform( 0.00607794, 0.00840175, -0.0994609, -0.00188107, 0.0996371, 0.00830168, 0.0997974, 0.00136636, 0.00621392, 0.00723678, 0.118864, 1.69693 )
+[node name="t19shootVFX" type="GPUParticles3D" parent="Head/Camera3D/t19" groups=["t19Particle"]]
+transform = Transform3D(0.00607794, 0.00840175, -0.0994609, -0.00188107, 0.0996371, 0.00830168, 0.0997974, 0.00136636, 0.00621392, 0.00723678, 0.118864, 1.69693)
 layers = 2
 emitting = false
 amount = 45
@@ -67,38 +60,37 @@ lifetime = 0.1
 one_shot = true
 explosiveness = 1.0
 randomness = 0.5
-visibility_aabb = AABB( -0.95878, -4.18833, -4.57705, 1.91756, 8.37665, 9.15411 )
-process_material = SubResource( 3 )
-draw_pass_1 = SubResource( 4 )
-script = ExtResource( 6 )
+visibility_aabb = AABB(-0.95878, -4.18833, -4.57705, 1.91756, 8.37665, 9.15411)
+process_material = SubResource("3")
+draw_pass_1 = SubResource("4")
+script = ExtResource("6")
 
-[node name="Melee" parent="Head/Camera" instance=ExtResource( 5 )]
-transform = Transform( -0.109419, 0, -0.0246987, -0.00336438, 0.111126, 0.0149047, 0.0244685, 0.0152797, -0.108399, 0.339816, -0.12338, -1.73658 )
+[node name="Melee" parent="Head/Camera3D" instance=ExtResource("5")]
+transform = Transform3D(-0.109419, 0, -0.0246987, -0.00336438, 0.111126, 0.0149047, 0.0244685, 0.0152797, -0.108399, 0.339816, -0.12338, -1.73658)
 
-[node name="ED-19" parent="Head/Camera" instance=ExtResource( 2 )]
-transform = Transform( -0.00953169, 0, 0.105285, 0, 0.105716, 0, -0.105285, 0, -0.00953169, 0.550225, -0.556877, -1.11305 )
+[node name="ED-19" parent="Head/Camera3D" instance=ExtResource("2")]
+transform = Transform3D(-0.00953169, 0, 0.105285, 0, 0.105716, 0, -0.105285, 0, -0.00953169, 0.550225, -0.556877, -1.11305)
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
-shape = SubResource( 1 )
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+shape = SubResource("1")
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
-mesh = SubResource( 2 )
-material/0 = null
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("2")
 
-[node name="ViewportContainer" type="ViewportContainer" parent="."]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="Viewport" type="Viewport" parent="ViewportContainer"]
-size = Vector2( 1920, 1080 )
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 transparent_bg = true
 handle_input_locally = false
-msaa = 3
-render_target_update_mode = 3
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
 
-[node name="Camera" type="Camera" parent="ViewportContainer/Viewport"]
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport"]
 cull_mask = 2
-script = ExtResource( 3 )
-camera_path = NodePath("../../../Head/Camera")
+script = ExtResource("3")
+camera_path = NodePath("../../../Head/Camera3D")

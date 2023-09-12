@@ -1,10 +1,10 @@
 extends Weapon
 
-export var fire_range = 2000
+@export var fire_range = 2000
 
 func _ready():
 	weapon = 1
-	raycast.cast_to = Vector3(0, 0, -fire_range)
+	raycast.target_position = Vector3(0, 0, -fire_range)
 
 func fire():
 	if current_weapon == 1:
@@ -14,7 +14,7 @@ func fire():
 		current_ammo -= 1
 		print(get_current_ammo())
 		check_collision(15)
-		yield(get_tree().create_timer(fire_rate), "timeout")
+		await get_tree().create_timer(fire_rate).timeout
 		get_tree().call_group("t19Particle", "emitf")
 		can_fire = true
 

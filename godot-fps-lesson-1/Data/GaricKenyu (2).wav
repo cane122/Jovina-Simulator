@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://4ooyc33hmabh"
-path="res://.godot/imported/jovina.wav-5aa13399df60aba2195d8652ed462c8a.sample"
+uid="uid://cqrt71tkt53qt"
+path="res://.godot/imported/GaricKenyu.wav-757c914b56c90631a54c9e0a5475833e.sample"
 
 [deps]
 
-source_file="res://Data/jovina.wav"
-dest_files=["res://.godot/imported/jovina.wav-5aa13399df60aba2195d8652ed462c8a.sample"]
+source_file="res://Data/GaricKenyu.wav"
+dest_files=["res://.godot/imported/GaricKenyu.wav-757c914b56c90631a54c9e0a5475833e.sample"]
 
 [params]
 

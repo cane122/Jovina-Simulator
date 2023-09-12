@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/ZvucnikFireEffect.wav-385f0b37db70881e24be1c471c0a5fdd.sample"
+type="AudioStreamWAV"
+uid="uid://bextf84uckugh"
+path="res://.godot/imported/ZvucnikFireEffect.wav-385f0b37db70881e24be1c471c0a5fdd.sample"
 
 [deps]
 
 source_file="res://Data/ZvucnikFireEffect.wav"
-dest_files=[ "res://.import/ZvucnikFireEffect.wav-385f0b37db70881e24be1c471c0a5fdd.sample" ]
+dest_files=["res://.godot/imported/ZvucnikFireEffect.wav-385f0b37db70881e24be1c471c0a5fdd.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

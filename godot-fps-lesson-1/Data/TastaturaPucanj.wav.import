@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/TastaturaPucanj.wav-bc5ea4837736a0b0bf097f5816d81c59.sample"
+type="AudioStreamWAV"
+uid="uid://cyyj5r5xp64ex"
+path="res://.godot/imported/TastaturaPucanj.wav-bc5ea4837736a0b0bf097f5816d81c59.sample"
 
 [deps]
 
 source_file="res://Data/TastaturaPucanj.wav"
-dest_files=[ "res://.import/TastaturaPucanj.wav-bc5ea4837736a0b0bf097f5816d81c59.sample" ]
+dest_files=["res://.godot/imported/TastaturaPucanj.wav-bc5ea4837736a0b0bf097f5816d81c59.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/Bijsebiubulju.wav-7f991401d55442353d8335b6850e7545.sample"
+type="AudioStreamWAV"
+uid="uid://c4db0me8dqv44"
+path="res://.godot/imported/Bijsebiubulju.wav-7f991401d55442353d8335b6850e7545.sample"
 
 [deps]
 
 source_file="res://Data/Bijsebiubulju.wav"
-dest_files=[ "res://.import/Bijsebiubulju.wav-7f991401d55442353d8335b6850e7545.sample" ]
+dest_files=["res://.godot/imported/Bijsebiubulju.wav-7f991401d55442353d8335b6850e7545.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0
